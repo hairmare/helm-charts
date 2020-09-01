@@ -10,8 +10,7 @@ image:
   repository: adfinissygroup/potz-holzoepfel-und-zipfelchape
   # image.pullPolicy -- When to pull the container image
   pullPolicy: Always
-  # image.tag -- Overrides the image tag whose default is the chart version.
-  tag: ""
+  # tag: ""
 
 imagePullSecrets: []
 nameOverride: ""
@@ -124,3 +123,7 @@ grafana:
   enabled: false
   # grafana.extraLabels -- Labels to add to all Grafana integration resources
   extraLabels: {}
+
+mongodb:
+  # mongodb.enabled -- Enable MongoDB "stateful" deploy
+  enabled: false

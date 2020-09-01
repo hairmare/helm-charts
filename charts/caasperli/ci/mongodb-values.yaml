@@ -1,0 +1,8 @@
+mongodb:
+  enabled: true
+  auth:
+    rootPassword: hunter2
+  persistence:
+    enabled: false
+  arbiter:
+    enabled: false

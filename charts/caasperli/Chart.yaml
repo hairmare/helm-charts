@@ -2,8 +2,8 @@ apiVersion: v2
 name: caasperli
 description: Deploy Caasperli to a Kubernetes Cluster
 type: application
-version: 0.8.1
-appVersion: latest
+version: 0.9.0
+appVersion: v0.2
 home: https://github.com/adfinis-sygroup/potz-holzoepfel-und-zipfelchape
 sources:
   - https://github.com/adfinis-sygroup/potz-holzoepfel-und-zipfelchape
@@ -12,3 +12,8 @@ maintainers:
   - name: adfinis-sygroup
     email: support@adfinis.com
     url: https://adfinis.com
+dependencies:
+  - name: mongodb
+    repository: https://charts.bitnami.com/bitnami
+    version: ~9.0.1
+    condition: mongodb.enabled

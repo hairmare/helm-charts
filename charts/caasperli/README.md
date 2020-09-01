@@ -1,6 +1,6 @@
 # caasperli
 
-![Version: 0.8.1](https://img.shields.io/badge/Version-0.8.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)
+![Version: 0.9.0](https://img.shields.io/badge/Version-0.9.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.2](https://img.shields.io/badge/AppVersion-v0.2-informational?style=flat-square)
 
 Deploy Caasperli to a Kubernetes Cluster
 
@@ -13,6 +13,12 @@ This chart is maintained by [Adfinis](https://adfinis.com/?pk_campaign=github&pk
 
 * <https://github.com/adfinis-sygroup/potz-holzoepfel-und-zipfelchape>
 * <https://github.com/adfinis-sygroup/helm-charts/tree/master/charts/caasperli>
+
+## Requirements
+
+| Repository | Name | Version |
+|------------|------|---------|
+| https://charts.bitnami.com/bitnami | mongodb | ~9.0.1 |
 
 ## Values
 
@@ -29,12 +35,12 @@ This chart is maintained by [Adfinis](https://adfinis.com/?pk_campaign=github&pk
 | grafana.extraLabels | object | `{}` | Labels to add to all Grafana integration resources |
 | image.pullPolicy | string | `"Always"` | When to pull the container image |
 | image.repository | string | `"adfinissygroup/potz-holzoepfel-und-zipfelchape"` | Container image to deploy |
-| image.tag | string | `""` | Overrides the image tag whose default is the chart version. |
 | imagePullSecrets | list | `[]` |  |
 | ingress.annotations | object | `{}` | Annotations to add to the ingress resource |
 | ingress.enabled | bool | `false` | Enable ingress |
 | ingress.hosts | list | `[{"host":"chart-example.local","paths":[]}]` | List of hosts to expose via ingress |
 | ingress.tls | list | `[]` | TLS configuration for ingress |
+| mongodb.enabled | bool | `false` | Enable MongoDB "stateful" deploy |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` | Annotations to add to Pod. |
